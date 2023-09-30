@@ -26,10 +26,11 @@ jobs:
         cd ecommerce_project
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-        docker network create ecommerce 
+        docker network create ecommerce
+        docker-compose -f docker-compose-testing.yaml -d up 
     - name: Run Tests
       run: |
-        docker-compose -f docker-compose-testing.yaml up
+        python manage.py test
 
   build:
 
