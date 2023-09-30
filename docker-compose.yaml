@@ -15,17 +15,18 @@ services:
       - mysql_data:/var/lib/mysql
     network_mode: "ecommerce"
 
-  # Django application service would go here
   wait:
     image: ubuntu
     container_name: wait
     command: sleep 10 && while True; do sleep 5; echo "done"; done;
     depends_on:
       - mysql
+    network_mode: "ecommerce"
 
   init-backend:
     image: n3ll1x/services:ecommerce-backend
     container_name:  init-backend
+    restart: on-failure
     command: python manage.py makemigrations && python manage.py migrate
     network_mode: "ecommerce"
     depends_on:
@@ -43,7 +44,6 @@ services:
       - mysql
       - wait
       - init-backend
-
 
 volumes:
   mysql_data:
