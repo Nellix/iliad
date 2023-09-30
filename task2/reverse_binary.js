@@ -11,9 +11,14 @@ function reverseBinary(number) {
     return reversedNumber;
 }
 
-// Example usage:
-let originalNumber = 14;
-let reversedNumber = reverseBinary(originalNumber);
+//Get argument from process shell
+const decimalNumber = process.argv[2];
 
-console.log(`Original Number: ${originalNumber}`);
-console.log(`Reversed Binary: ${reversedNumber}`);
+// Check if a valid number is provided as an argument
+if (isNaN(decimalNumber)) {
+    console.log('Please provide a valid number as a command line argument.');
+} else {
+    // Call the function and print the result
+    const result = reverseBinary(parseInt(decimalNumber));
+    console.log(`The reversed binary representation of ${decimalNumber} is: ${result}`);
+}
