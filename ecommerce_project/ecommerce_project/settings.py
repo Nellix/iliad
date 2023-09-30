@@ -76,31 +76,13 @@ TEMPLATES = [
 WSGI_APPLICATION = "ecommerce_project.wsgi.application"
 
 
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-TESTING = 'test' in sys.argv
-
-if TESTING:
-    DATABASES = {
-        'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'taskUno',
-        'USER': 'user',
-        'PASSWORD': 'password',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-        }
-    }
-
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'taskUno',
-        'USER': 'user',
-        'PASSWORD': 'password',
-        'HOST': 'mysql',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': '127.0.0.1', #change to mysql for docker-compose
         'PORT': '3306',
     }
 }
