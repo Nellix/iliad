@@ -83,7 +83,7 @@ DATABASES = {
         'NAME': 'taskUno',
         'USER': 'user',
         'PASSWORD': 'password',
-        'HOST': '127.0.0.1',
+        'HOST': 'mysql',
         'PORT': '3306',
     }
 }
