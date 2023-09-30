@@ -29,7 +29,6 @@ jobs:
         docker network create ecommerce 
     - name: Run Tests
       run: |
-        cd ecommerce_project
         docker-compose -f docker-compose-testing.yaml up
 
   build:
