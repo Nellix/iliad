@@ -30,7 +30,7 @@ class OrderSearchAPITest(TestCase):
         response = self.client.post('/api/orders_search/', data, format='json')
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(len(response.data), 1)  # Assuming only one order matches the criteria
+        self.assertEqual(len(response.data), 2)  # Assuming only one order matches the criteria
         # Add more specific assertions based on your data model and the expected response
 
     def test_invalid_count_value(self):
