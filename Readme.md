@@ -10,11 +10,11 @@ Bootstrap
 ### Assumptions
 
  
-● The XXX team wants to have an overview of the orders placed during the current day on the e-commerce.
-● You know that the ecommerce platform exposes useful API.
-● You don’t know the URL of that API and how you can authenticate
-● You know the format of the response
-● You can start mocking up the software  
+- The XXX team wants to have an overview of the orders placed during the current day on the e-commerce.
+- You know that the ecommerce platform exposes useful API.
+- You don’t know the URL of that API and how you can authenticate
+- You know the format of the response
+- You can start mocking up the software  
 
 You have to:
 
