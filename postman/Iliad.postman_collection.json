@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "63ceb0c7-8b29-4529-9e52-d8dfdcd8bdeb",
+		"name": "Iliad",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET All Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/orders",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"orderId\": \"PP040023123\",\n    \"phone\": \"+79620230303\",\n    \"shipping_status\": \"not sent\",\n    \"shipping_price\": \"1000.00\",\n    \"shipping_payment_status\": \"not paid\",\n    \"payment_status\": \"not paid\",\n    \"date_created\": \"2023-09-16\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/orders/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET All Order by orderID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/orders/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order Search",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"count\": 1,\n    \"date_from\": \"2023-09-30\",\n    \"date_to\": \"2023-10-30\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/orders_search/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders_search",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD OrderItems",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n                \"id\": 3,\n                \"item_sid\": \"4062345021658\",\n                \"price\": \"24300.00\",\n                \"cost\": \"24300.00\",\n                \"tax_perc\": 20,\n                \"tax_amt\": \"4050.00\",\n                \"quantity\": 1,\n                \"tracking_number\": \"1Z05V36Y7951053268\",\n                \"canceled\": \"N\",\n                \"shipped_status_sku\": \"not sent\",\n                \"order\": 1\n            }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/ordersItems/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"ordersItems",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
