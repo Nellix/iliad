@@ -30,10 +30,10 @@ class OrdersSearchView(APIView):
 
         print("HERE: "+str(count)+" "+str(date_from)+" "+str(date_to))
 
-        if (str(date_from).contains('-')):
+        if ( '-' in str(date_from)):
             return Response({'error': 'Invalid date_from format'}, status=status.HTTP_400_BAD_REQUEST)
         
-        if (str(date_to).contains('-')):
+        if ( '-' in str(date_to)):
             return Response({'error': 'Invalid date_to format'}, status=status.HTTP_400_BAD_REQUEST)
 
         # Validate input parameters
