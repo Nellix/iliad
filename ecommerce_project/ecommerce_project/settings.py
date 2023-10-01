@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': 'taskUno',
         'USER': 'root',
         'PASSWORD': 'root',
-        'HOST': 'mysql', #change to mysql for docker-compose
+        'HOST': '127.0.0.1', #change to mysql for docker-compose
         'PORT': '3306',
     }
 }
