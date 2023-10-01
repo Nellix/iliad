@@ -22,15 +22,15 @@ class OrderSearchAPITest(TestCase):
     def test_valid_orders_search(self):
         # Test a valid request
         data = {
-            'count': 2,
+            'count': 1,
             'date_from': '2023-09-01',
-            'date_to': '2023-09-30',
+            'date_to': '2023-10-30',
         }
 
         response = self.client.post('/api/orders_search/', data, format='json')
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(len(response.data), 2)  # Assuming only one order matches the criteria
+        self.assertEqual(len(response.data), 1)  # Assuming only one order matches the criteria
         # Add more specific assertions based on your data model and the expected response
 
     def test_invalid_count_value(self):
