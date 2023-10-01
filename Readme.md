@@ -1,3 +1,14 @@
+##  Explanation
+I have implemented the following tasks:
+
+- **task1** backend only + minimal CI pipeline . You can find the code into *task1* branch
+- **task2**  You can find the code into *task2* branch
+- **task3**  You can find the code into *task3* branch
+- **task4**   You can find the code into *task4* branch
+
+In each branch, there is a Readme.md file describing better the solution implmented.
+
+
 ## Traccia
 
 In allegato troverai il documento word ***“TECHNICAL TEST.docx”*** che ti servirà come linea guida.
@@ -28,9 +39,3 @@ The application code does not explicitly interact with the cache. Instead, the c
 File zip con dentro almeno i 3 scripts (javascript, php e python)
 
 
-python3.9 manage.py makemigrations  
-python3.9 manage.py migrate
-
-
-docker network create ecommerce
-docker-compose up
