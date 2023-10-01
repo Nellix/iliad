@@ -30,9 +30,9 @@ Dopo aver completato tutto avrò bisogno di ricevere:
    caching? O altre soluzioni? 
    Una soluzione sarebbe usare un motore di caching prima del database. In particulare consiglierei Redis come cache del db . Ci sono varie *strategie di caching* :
    - **Read-Through:**
-The application code does not explicitly interact with the cache. Instead, the cache provider (Redis) is responsible for loading data into itself when a cache miss occurs.
-	- **Cache-Aside** is a caching strategy where the application code is responsible for loading data into the cache.
-  
+Il codice dell'aaplicazione non interagisce esplicitamente con la cache. Invece, è il cache provider (i.e. Redis) il responsabile di caricare i dati dentro di se quando c'è unca cache miss .
+	- **Cache-Aside:** Il codice dell'applicazione è responsabile del caricamento dati nella cache. 
+    
 
 **Task 2, 3 e 4 (Optional):**
 
