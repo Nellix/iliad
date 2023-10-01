@@ -7,7 +7,7 @@ from .serializers import OrderSerializer
 from rest_framework.response import Response
 from .models import Order, OrderItem
 from .serializers import OrderSerializer
-from rest_framework.views import APIView
+from rest_framework.views import APIView 
 
 
 class OrderList(generics.ListCreateAPIView):
@@ -29,6 +29,12 @@ class OrdersSearchView(APIView):
         date_to = request.data.get('date_to')
 
         print("HERE: "+str(count)+" "+str(date_from)+" "+str(date_to))
+
+        if (str(date_from).contains('-')):
+            return Response({'error': 'Invalid date_from format'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        if (str(date_to).contains('-')):
+            return Response({'error': 'Invalid date_to format'}, status=status.HTTP_400_BAD_REQUEST)
 
         # Validate input parameters
         if not (1 <= count <= 20):
